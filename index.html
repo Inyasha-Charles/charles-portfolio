@@ -74,6 +74,10 @@
 
                 <div class="hero-buttons">
 
+                    <a href = "#services" class = "button secondary">
+                        Services and prices
+                    </a>
+
                     <a href="#projects" class="button primary">
                         View My Work
                     </a>
@@ -113,7 +117,7 @@
 
         </section>
 
-        <!-- UP TO -->>
+        <!-- UP TO -->
         <section id = "what im doing now">
 
             <h2>What I'm up to</h2>
@@ -160,7 +164,7 @@
 
         </section>
 
-        <!-- SKILLS -->>
+        <!-- SKILLS -->
         <section id = "skills">
 
             <h2>My Skills</h2>
@@ -169,10 +173,32 @@
 
                 <div class = "skills-card">
                     <h3>core technologies</h3>
-                    <p>python</p>
-                    <p>java</p>
-                    <p>HTML</p>
-                    <p>CSS</p>
+
+                    <div class = "icon">
+                        <img  src = "icons/python_18894.webp">
+                        <p>Python</p>
+                    </div>
+
+                    <div class="icon">
+                        <img src = "icons/java_original_logo_icon_146458.webp">
+                        <p>java</p>
+                    </div>
+
+                    <div class = "icon">
+                        <img src = "icons/file_type_html_icon_130541.webp">
+                        <p>HTML</p>
+                    </div>
+
+                    <div class = "icon">
+                        <img src = "icons/file_type_css_icon_130661.webp">
+                        <p>CSS</p>
+                    </div>
+
+                    <div class = "icon">
+                        <img src = "icons/java_script_icon_245463.png">
+                        <p>Java script</p>
+                    </div>
+
                 </div>
 
                 <div class = "skills-card cv-card">
@@ -217,6 +243,8 @@
         <section id="services">
 
             <h2>Services</h2>
+
+            <p class = "service-instructions">choose the service you need</p>
 
             <div class="services-container">
 
@@ -281,7 +309,7 @@
                     <h3>my own personal website</h3>
 
                     <p>i coded the website you are currently on, 
-                        so if you would like something similar for yourself or your business 
+                        so if you would like something similar ,or completely different, for yourself or your business 
                         please click the web development card above
                     </p>
 
@@ -293,9 +321,9 @@
 
                 <div class="project-content">
 
-                    <h3>Python Employee Income Management System</h3>
+                    <img class = project-image src = "images/Screenshot 2026-10-05 181602.png">
 
-                    <img class = project-img src = >
+                    <h3>Python Employee Income Management System</h3>
 
                     <p>
                         A Python-based employee income management system
@@ -312,26 +340,6 @@
                     </a>
 
                 </div>
-
-                </div>
-
-            </div>
-
-            <div class = "project-card">
-
-                <div class = "project-content">
-
-                    <h3>JAVA truck finance system</h3>
-
-                    <p>
-                        A financing system where you can track the income and expenses of a hypothetical trucking business.
-                        where you can calculate the fuel consumption, distance traveled, expenses and income made in a week
-                    </p>
-
-                    <a href = "#" 
-                    class = "project-link" 
-                    target = "_blank">
-                    Vew GitHub</a>
 
                 </div>
 
@@ -412,6 +420,145 @@
         </div>
 
     </div>
+
+    <!-- REQUEST PANEL -->
+    <div class="request-panel" id="requestPanel">
+
+        <div class="request-box">
+
+            <button class="request-close" id="requestClose">&times;</button>
+
+            <h2>Request a Service</h2>
+
+            <div class="request-summary">
+
+                <p>
+                    <strong>Service:</strong>
+                    <span id="requestService"></span>
+                </p>
+
+                <p>
+                    <strong>Package:</strong>
+                    <span id="requestPackage"></span>
+                </p>
+
+                <p>
+                    <strong>Price:</strong>
+                    <span id="requestPrice"></span>
+                </p>
+
+            </div>
+
+
+            <form id="requestForm">
+
+                <input type="hidden" id="emailService" name="service">
+                <input type="hidden" id="emailPackage" name="package">
+                <input type="hidden" id="emailPrice" name="price">
+
+                <div class="form-group">
+
+                    <label for="clientName">Name</label>
+
+                    <input
+                        type="text"
+                        id="clientName"
+                        name="name"
+                        placeholder="Your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="clientEmail">Email</label>
+
+                    <input
+                        id="clientEmail"
+                        name="email"
+                        placeholder="Your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="clientPhone">Phone Number</label>
+
+                    <input
+                        type="tel"
+                        id="clientPhone"
+                        name="phone"
+                        placeholder="Your phone number"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="projectDescription">
+                        What do you need?
+                    </label>
+
+                    <textarea
+                        id="projectDescription"
+                        name="description"
+                        placeholder="Give me a short description of what you would like..."
+                        rows="5"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button type="submit" class="request-submit">
+                    Send Request
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- SUCCESS PANEL -->
+        <div class="success-panel" id="successPanel">
+
+            <div class="success-box">
+
+                <button class="success-close" id="successClose">
+                    &times;
+                </button>
+
+                <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>Request Sent</h2>
+
+            <p>
+                Thank you for your request.
+                I'll review the details and get back to you as soon as possible.
+            </p>
+
+            <button class="success-button" id="successButton">
+                Done
+            </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script
+        type = "text/javascript"
+        src = "https://cdn.jsdelivr.net/npm/@emailjs/browser@5/dist/email.min.js"
+    ></script>
 
     <script src = "script.js"></script>
 
