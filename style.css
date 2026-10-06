@@ -397,11 +397,13 @@ section h2::after {
 /* SERVICES INSTRUCTIONS */
 .service-instructions  {
 
-    color: #aaaaaa;
+    color: #d2d2d2;
 
     text-align: center;
 
     margin-bottom: 20px;
+
+    font-weight: bold;
 
 }
 
