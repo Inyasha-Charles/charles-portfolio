@@ -1259,4 +1259,52 @@ footer {
 }
 
 
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 768px) {
+
+    /* Skills section */
+    .skills-container {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    /* Skills card */
+    .skills-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* CV card */
+    .cv-card {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    /* CV image */
+    .cv-card img {
+        max-width: 150px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* CV buttons */
+    .cv-card a {
+        display: inline-block;
+        margin: 10px 5px;
+    }
+
+    /* General section spacing */
+    section {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+}
 
