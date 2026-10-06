@@ -387,7 +387,8 @@ section h2::after {
 }
 
 .service-card p {
-    color: #aaaaaa;
+    color: #c4c2c2;
+    font-weight: bold;
 }
 
 .service-card {
@@ -404,6 +405,8 @@ section h2::after {
     margin-bottom: 20px;
 
     font-weight: bold;
+
+
 
 }
 
@@ -721,13 +724,15 @@ footer {
 
 
 /* SUBTITLE */
-.price-subtitle {
+.pricing-subtitle {
 
     text-align: center;
 
-    color: #999999;
+    color: #d2d2d2;
 
     margin-bottom: 30px;
+
+    font-weight: bold;
 
 }
 
@@ -1308,4 +1313,5 @@ footer {
     }
 
 }
+
 
