@@ -38,6 +38,7 @@ const services = {
     python: {
 
         title: "Python Development",
+        subtitle: "pick a package",
 
         packages: [
 
@@ -94,6 +95,7 @@ const services = {
     java: {
 
         title: "Java Development",
+        subtitle: "pick a package",
 
         packages: [
 
@@ -150,6 +152,7 @@ const services = {
     web: {
 
         title: "Web Development",
+        subtitle: "pick a package",
 
         packages: [
 
@@ -210,6 +213,7 @@ const services = {
     testing: {
 
         title: "Program Testing",
+        subtitle: "pick a package",
 
         packages: [
 
