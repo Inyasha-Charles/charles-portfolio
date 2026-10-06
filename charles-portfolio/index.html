@@ -1,0 +1,420 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Charles | Student Developer</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+
+        <nav>
+
+            <h2 class="logo">
+                Charles MD<span>.</span>
+            </h2>
+
+            <button class = "menu-button" onclick = "toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul id = "nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+
+                <p class="intro">
+                    HELLO I'M CHARLES
+                </p>
+
+                <h3>
+
+                    Student Developer
+
+                    <span>
+                        Building Practical Solutions
+                    </span>
+
+                </h3>
+
+                <p class="hero-description">
+
+                    I build websites, software and practical digital
+                    solutions for individuals, students and small businesses.
+
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="button primary">
+                        View My Work
+                    </a>
+
+                    <a href="#contact" class="button secondary">
+                        Contact Me
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about">
+
+            <h2>About Me</h2>
+
+            <p>
+                I’m a Software Engineering student and aspiring developer passionate about building practical software and websites. 
+                I enjoy turning ideas into functional solutions while continuously developing my skills in Python, Java, HTML, CSS, and more.
+                Here are some links to get to know more about me
+            </p>
+
+            <div class = "social-buttons">
+
+                <a href = "https://www.linkedin.com/in/charles-nyachowe-09570b364/" class = "social-button" target="_blank">
+                    linkedin
+                </a>
+
+                <a href = "https://www.instagram.com/charlies_mobile_develoment?stkn=Zjh0cnpnNm01MWdh" class = "social-button" target="_blank">
+                    instagram
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- UP TO -->>
+        <section id = "what im doing now">
+
+            <h2>What I'm up to</h2>
+
+            <div class = "up-to">
+
+                <div class = "up-to-content">
+
+                    <h3>Vasity</h3>
+
+                    <p>
+                        I am currently studying for my BSc in Software Engineering. 
+                        Before this, I completed a Higher Certificate in Software Development at the same institution, 
+                        which was where I discovered my passion for coding and database development. 
+                        My passion for software development comes from that combination of creativity, 
+                        problem-solving and the ability to build things that can be useful to others. 
+                        I want to continue developing my skills, work on real-world projects, 
+                        and grow into a developer capable of turning ideas into practical software solutions.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class = "up-to">
+
+                <div class = "up-to-content">
+
+                    <h3>freelancing</h3>
+
+                    <p>
+                        As I continue developing my skills, I have also started exploring freelancing 
+                        as a way to gain practical experience outside of my studies. 
+                        I want to work on real projects, solve problems for actual clients, 
+                        and experience what it is like to take a project from an initial idea 
+                        to a finished product. Freelancing gives me the opportunity to challenge myself beyond academic assignments, 
+                        Every project is a chance to learn something new. More importantly, I see freelancing as a way to build my experience 
+                        and portfolio while doing something I genuinely enjoy.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SKILLS -->>
+        <section id = "skills">
+
+            <h2>My Skills</h2>
+
+            <div class = "skills-container">
+
+                <div class = "skills-card">
+                    <h3>core technologies</h3>
+                    <p>python</p>
+                    <p>java</p>
+                    <p>HTML</p>
+                    <p>CSS</p>
+                </div>
+
+                <div class = "skills-card cv-card">
+
+                    <h3>CV</h3>
+
+                    <div class = "resume-preview" >
+                        <div class = "resume-paper">
+                            <div class = "resume-header">CHARLES</div>
+                            <div class = "resume-line"></div>
+                            <div class = "resume-line short"></div>
+                            <div class = "resume-line"></div>
+                            <div class = "resume-line"></div>
+                        </div>
+                    </div>
+
+                    <div class = "resume-buttons">
+
+                        <a href = "documents/charles resume.pdf" 
+                            target="_blank" 
+                            class = "cv-button"> 
+                            View CV
+                        </a>
+
+                        <a href = "documents/charles resume.pdf" 
+                            download = "charles resume.pdf" 
+                            class = "cv-button">
+                            Download CV
+                        </a>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- SERVICES -->
+        <section id="services">
+
+            <h2>Services</h2>
+
+            <div class="services-container">
+
+                <div class="service-card" data-service = "python">
+
+                    <h3>Python Development</h3>
+
+                    <p>
+                        Small Python applications, automations and
+                        programming.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card" data-service = "java">
+
+                    <h3>Java Development</h3>
+
+                    <p>
+                        Java applications, programming and debugging.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card" data-service = "web">
+
+                    <h3>Web Development</h3>
+
+                    <p>
+                        Building websites and web application
+                    </p>
+
+                </div>
+
+                <div class="service-card" data-service = "testing">
+
+                    <h3>Software testing</h3>
+
+                    <p>
+                        Testing software applications, debugging and
+                        providing solutions.
+                    </p>
+                
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECTS -->
+        <section id="projects">
+
+            <h2>My Projects</h2>
+
+            <div class = "project-card">
+
+                <div class = "project-content">
+
+                    <h3>my own personal website</h3>
+
+                    <p>i coded the website you are currently on, 
+                        so if you would like something similar for yourself or your business 
+                        please click the web development card above
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="project-card">
+
+                <div class="project-content">
+
+                    <h3>Python Employee Income Management System</h3>
+
+                    <img class = project-img src = >
+
+                    <p>
+                        A Python-based employee income management system
+                        with role-based access control, user authentication,
+                        and Excel data storage.
+                    </p>
+
+                    <a
+                        href="https://github.com/Inyasha-Charles/python-employee-income-management-system.git"
+                        class="project-link"
+                        target="_blank"
+                    >
+                        View GitHub
+                    </a>
+
+                </div>
+
+                </div>
+
+            </div>
+
+            <div class = "project-card">
+
+                <div class = "project-content">
+
+                    <h3>JAVA truck finance system</h3>
+
+                    <p>
+                        A financing system where you can track the income and expenses of a hypothetical trucking business.
+                        where you can calculate the fuel consumption, distance traveled, expenses and income made in a week
+                    </p>
+
+                    <a href = "#" 
+                    class = "project-link" 
+                    target = "_blank">
+                    Vew GitHub</a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+        <section id="contact">
+
+            <h2>Contact Me</h2>
+
+            <p>
+                If you have a project or idea you would like to discuss,
+                please feel free to reach out to me.
+            </p>
+
+            <a
+                href="https://wa.me/27 66 239 7828"
+                target="_blank"
+                class="button primary"
+            >
+                whatsapp Me
+            </a>
+
+            <a
+                href="mailto:charlesinyashanyachowe@gmail.com"
+                target="_blank"
+                class="button secondary"
+            >
+                Send Me an Email
+            </a>
+
+            <a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            &copy; 2026 Charles. Built with HTML, CSS & JavaScript.
+        </p>
+
+    </footer>
+
+    <script>
+
+        function toggleMenu() {
+            const menu = document.getElementById("nav-menu");
+            menu.classList.toggle("show");
+        }
+
+    </script>
+
+    <!-- PRICING PANEL -->
+    <div class = "pricing-panel" id = "pricePanel">
+
+        <div class = "pricing-box">
+
+            <button class = "price-close" id = "priceClose"> &times;</button>
+
+            <h2 id = "priceTitle"> Service pricing </h2>
+
+            <p class = "pricing-subtitle" id = "priceSubtitle"> 
+                Choose a package 
+            </p>
+
+
+            <div class = "package-container" id = "packages">
+                <!-- prices will appear here -->
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src = "script.js"></script>
+
+</body>
+
+</html>
