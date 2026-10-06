@@ -1,5 +1,6 @@
 const serviceCards = document.querySelectorAll(".service-card");
 
+
 const pricingPanel = document.getElementById("pricePanel");
 
 const priceClose = document.getElementById("priceClose");
@@ -8,7 +9,28 @@ const priceTitle = document.getElementById("priceTitle");
 
 const priceSubtitle = document.getElementById("priceSubtitle");
 
+
 const packagesContainer = document.getElementById("packages");
+
+
+const requestPanel = document.getElementById("requestPanel");
+
+const requestClose = document.getElementById("requestClose");
+
+const requestService = document.getElementById("requestService");
+
+const requestPackage = document.getElementById("requestPackage");
+
+const requestPrice = document.getElementById("requestPrice");
+
+const requestForm = document.getElementById("requestForm");
+
+
+const successPanel = document.getElementById("successPanel");
+
+const successClose = document.getElementById("successClose");
+
+const successButton = document.getElementById("successButton");
 
 
 const services = {
@@ -314,7 +336,15 @@ serviceCards.forEach(card => {
                 </ul>
 
             `;
+            
+            packageCard.addEventListener("click", function() {
 
+                openRequestPanel(
+                    service.title,
+                    packageInfo.name,
+                    packageInfo.price
+                );
+            });
 
             packagesContainer.appendChild(packageCard);
 
@@ -371,6 +401,111 @@ document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
 
         pricingPanel.classList.remove("active");
+
+        document.body.style.overflow = "";
+
+    }
+
+});
+
+/* REQUEST PANEL */
+function openRequestPanel(service, packageName, price) {
+
+    requestService.textContent = service;
+    requestPackage.textContent = packageName;
+    requestPrice.textContent = price;
+
+    document.getElementById("emailService").value = service;
+    document.getElementById("emailPackage").value = packageName;
+    document.getElementById("emailPrice").value = price;
+
+    pricingPanel.classList.remove("active")
+
+    requestPanel.classList.add("active")
+}
+
+requestClose.addEventListener("click", function() {
+
+    requestPanel.classList.remove("active");
+});
+
+requestPanel.addEventListener("click", function(event) {
+
+    if (event.target === requestPanel) {
+
+        requestPanel.classList.remove("active")
+    }
+});
+
+emailjs.init ({
+
+    publicKey: "M2il9gaWJ60NpqJir"
+})
+
+requestForm.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    const submitButton = document.querySelector(".request-submit");
+
+    submitButton.textContent = "Sending...";
+    submitButton.disabled = true;
+
+    emailjs.sendForm(
+        "service_m2ek5r8",
+        "template_k1ea4d4",
+        this
+    )
+    .then(function () {
+
+        successPanel.classList.add("active");
+
+        requestForm.reset();
+
+        requestPanel.classList.remove("active");
+
+        submitButton.textContent = "Send Request";
+        submitButton.disabled = false;
+
+    })
+    .catch(function (error) {
+
+        console.error("EmailJS Error:", error);
+
+        alert(
+            "There was a problem sending your request. Please try again."
+        );
+
+        submitButton.textContent = "Send Request";
+        submitButton.disabled = false;
+
+    });
+
+});
+
+successClose.addEventListener("click", function () {
+
+    successPanel.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+});
+
+
+successButton.addEventListener("click", function () {
+
+    successPanel.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+});
+
+
+successPanel.addEventListener("click", function (event) {
+
+    if (event.target === successPanel) {
+
+        successPanel.classList.remove("active");
 
         document.body.style.overflow = "";
 
