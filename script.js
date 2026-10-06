@@ -419,28 +419,32 @@ function openRequestPanel(service, packageName, price) {
     document.getElementById("emailPackage").value = packageName;
     document.getElementById("emailPrice").value = price;
 
-    pricingPanel.classList.remove("active")
+    pricingPanel.classList.remove("active");
 
-    requestPanel.classList.add("active")
+    requestPanel.classList.add("active");
+
+    document.body.style.overflow = "hidden";
 }
 
 requestClose.addEventListener("click", function() {
 
     requestPanel.classList.remove("active");
+    document.body.style.overflow = "";
 });
 
 requestPanel.addEventListener("click", function(event) {
 
     if (event.target === requestPanel) {
 
-        requestPanel.classList.remove("active")
+        requestPanel.classList.remove("active");
+        document.body.style.overflow = "";
     }
 });
 
 emailjs.init ({
 
     publicKey: "M2il9gaWJ60NpqJir"
-})
+});
 
 requestForm.addEventListener("submit", function (event) {
 
@@ -463,6 +467,8 @@ requestForm.addEventListener("submit", function (event) {
         requestForm.reset();
 
         requestPanel.classList.remove("active");
+
+        document.body.style.overflow = "";
 
         submitButton.textContent = "Send Request";
         submitButton.disabled = false;
